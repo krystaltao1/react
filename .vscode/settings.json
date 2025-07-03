@@ -1,0 +1,71 @@
+{
+  "files.associations": {
+    "*.jsx": "javascriptreact",
+    "*.tsx": "typescriptreact",
+    "*.stories.*": "typescriptreact",
+    "*.game.ts": "typescript",
+    "*.web.ts": "typescript"
+  },
+  "files.exclude": {
+    "**/.git": true,
+    "**/.DS_Store": true,
+    "**/node_modules": true,
+    "**/dist": true,
+    "**/build": true,
+    "**/.cache": true
+  },
+
+  "path-intellisense.mappings": {
+    "@": "${workspaceFolder}",
+    "@games": "${workspaceFolder}/games",
+    "@web": "${workspaceFolder}/web",
+    "@static": "${workspaceFolder}/static",
+    "@lib": "${workspaceFolder}/lib",
+    "@assets": "${workspaceFolder}/assets"
+  },
+
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features",
+    "editor.quickSuggestions": {
+      "other": true,
+      "comments": false,
+      "strings": true
+    }
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  "typescript.preferences.importModuleSpecifier": "relative",
+  "javascript.preferences.importModuleSpecifier": "relative",
+
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "typescript": "typescriptreact"
+  },
+  "liveServer.settings.ignoreFiles": ["**/games/**", "**/dist/**"],
+
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.organizeImports": true
+  },
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "html"
+  ],
+  "prettier.singleQuote": true,
+  "prettier.printWidth": 100,
+
+  "debug.javascript.usePreview": true,
+  "debug.javascript.autoAttachFilter": "onlyWithFlag"
+}
