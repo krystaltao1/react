@@ -4,68 +4,75 @@ module.exports = {
     browser: true,
     node: true,
     es2021: true,
-    'vitest/globals': true,
+    "vitest/globals": true,
   },
   extends: [
-    'eslint:recommended',
-    'plugin:@typescript-eslint/recommended',
-    'plugin:react/recommended',
-    'plugin:react-hooks/recommended',
-    'plugin:jsx-a11y/recommended',
-    'prettier',
-    'plugin:vitest/recommended',
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:jsx-a11y/recommended",
+    "prettier",
+    "plugin:vitest/recommended",
   ],
-  parser: '@typescript-eslint/parser',
+  parser: "@typescript-eslint/parser",
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
     },
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: './tsconfig.json',
+    ecmaVersion: "latest",
+    sourceType: "module",
+    project: "./tsconfig.json",
   },
-  plugins: ['@typescript-eslint', 'react', 'jsx-a11y', 'vitest', 'import'],
+  plugins: ["@typescript-eslint", "react", "jsx-a11y", "vitest", "import"],
   settings: {
     react: {
-      version: 'detect',
+      version: "detect",
     },
-    'import/resolver': {
+    "import/resolver": {
       typescript: {
         alwaysTryTypes: true,
       },
     },
   },
   rules: {
-    'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'warn',
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'warn',
+    "no-console": process.env.NODE_ENV === "production" ? "error" : "warn",
+    "no-debugger": process.env.NODE_ENV === "production" ? "error" : "warn",
 
-    '@typescript-eslint/consistent-type-imports': 'error',
-    '@typescript-eslint/no-unused-vars': [
-      'warn',
+    "@typescript-eslint/consistent-type-imports": "error",
+    "@typescript-eslint/no-unused-vars": [
+      "warn",
       {
-        argsIgnorePattern: '^_',
-        varsIgnorePattern: '^_',
+        argsIgnorePattern: "^_",
+        varsIgnorePattern: "^_",
       },
     ],
 
-    'react/react-in-jsx-scope': 'off',
-    'react/prop-types': 'off',
+    "react/react-in-jsx-scope": "off",
+    "react/prop-types": "off",
 
-    'import/order': [
-      'error',
+    "import/order": [
+      "error",
       {
-        groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index'],
-        'newlines-between': 'always',
+        groups: [
+          "builtin",
+          "external",
+          "internal",
+          "parent",
+          "sibling",
+          "index",
+        ],
+        "newlines-between": "always",
       },
     ],
   },
   overrides: [
     {
-      files: ['**/*.game.ts'],
+      files: ["**/*.game.ts"],
       rules: {
-        'react-hooks/rules-of-hooks': 'off',
-        'react-hooks/exhaustive-deps': 'off',
-        'react/jsx-no-undef': 'off',
+        "react-hooks/rules-of-hooks": "off",
+        "react-hooks/exhaustive-deps": "off",
+        "react/jsx-no-undef": "off",
       },
       env: {
         browser: true,
@@ -73,29 +80,29 @@ module.exports = {
       },
     },
     {
-      files: ['**/*.web.ts', '**/*.web.tsx'],
-      extends: ['plugin:react/recommended'],
+      files: ["**/*.web.ts", "**/*.web.tsx"],
+      extends: ["plugin:react/recommended"],
       rules: {
-        'react-hooks/rules-of-hooks': 'error',
-        'react-hooks/exhaustive-deps': 'warn',
+        "react-hooks/rules-of-hooks": "error",
+        "react-hooks/exhaustive-deps": "warn",
       },
     },
     {
-      files: ['**/*.test.ts', '**/*.spec.ts'],
+      files: ["**/*.test.ts", "**/*.spec.ts"],
       rules: {
-        'no-console': 'off',
-        '@typescript-eslint/no-empty-function': 'off',
+        "no-console": "off",
+        "@typescript-eslint/no-empty-function": "off",
       },
     },
     {
-      files: ['*.config.js'],
+      files: ["*.config.js"],
       env: {
         node: true,
       },
       rules: {
-        '@typescript-eslint/no-var-requires': 'off',
+        "@typescript-eslint/no-var-requires": "off",
       },
     },
   ],
-  ignorePatterns: ['dist', 'build', 'coverage', '*.d.ts', 'vite.config.ts'],
+  ignorePatterns: ["dist", "build", "coverage", "*.d.ts", "vite.config.ts"],
 };
