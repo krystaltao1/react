@@ -7,9 +7,16 @@
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.3.0",
     "@testing-library/user-event": "^13.5.0",
+    "eslint": "^8.57.1",
+    "intellisense": "^0.0.1",
+    "path": "^0.12.7",
+    "prettier": "^3.6.2",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-scripts": "5.0.1",
+    "refactor": "^0.0.3",
+    "storybook": "^9.0.15",
+    "vitest": "^3.2.4",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -38,7 +45,6 @@
   },
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
   "main": "index.js",
-  "devDependencies": {},
   "keywords": [],
   "author": "",
   "license": "ISC"
